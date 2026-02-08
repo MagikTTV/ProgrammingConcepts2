@@ -19,7 +19,7 @@ Check if tickets are available, if yes return tickets, if no say none left
     """
     while True:
         # Prompt the user for the number of tickets they want to buy.
-        request_str = input("Pray tell, how many tickets wouldst thou claim, O moviegoer supreme? ")
+        request_str = input("Pray tell, how many tickets wouldst thou claim, O moviegoer supreme (1-4)? ")
 
         # Validate that the input is numeric before converting.
         if not request_str.strip().isdigit():
@@ -49,13 +49,13 @@ Check if tickets are available, if yes return tickets, if no say none left
         return requested_tickets
 
 
-def run_ticket_presale(total_tickets: int = 10) -> None:
+def run_ticket_presale(ticket_stockpile: int = 10) -> None:
     """
   Brief description:
     Runs the ticket pre-sale process until all tickets are sold and displays the total number of buyers.
 
 Parameters:
-    total_tickets (int): The total number of tickets available.
+    ticket_stockpile (int): The total number of tickets available.
 
 Variables:
     remaining_tickets (int): Tracks how many tickets are left.
@@ -65,7 +65,7 @@ Variables:
         None
     """
     # Store the remaining tickets so we can update the count after each purchase.
-    remaining_tickets = total_tickets
+    remaining_tickets = ticket_stockpile
 
     # Accumulate the number of buyers who successfully purchased tickets.
     buyer_count = 0
@@ -73,7 +73,7 @@ Variables:
     # Provide a friendly start message so the user understands the constraints.
     print("Welcome to the Cinema Ticket Pre-Sale!")
     print("Each buyer may purchase up to 4 tickets.")
-    print(f"There are {total_tickets} tickets available in total.")
+    print(f"There are {ticket_stockpile} tickets available in total.")
     print()
 
     # Continue selling tickets until none remain.
