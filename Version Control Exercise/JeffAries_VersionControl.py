@@ -49,7 +49,7 @@ Check if tickets are available, if yes return tickets, if no say none left
         return requested_tickets
 
 
-def run_ticket_presale(total_tickets: int = 20) -> None:
+def run_ticket_presale(total_tickets: int = 10) -> None:
     """
   Brief description:
     Runs the ticket pre-sale process until all tickets are sold and displays the total number of buyers.
