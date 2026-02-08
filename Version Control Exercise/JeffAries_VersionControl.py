@@ -19,7 +19,7 @@ Check if tickets are available, if yes return tickets, if no say none left
     """
     while True:
         # Prompt the user for the number of tickets they want to buy.
-        request_str = input("How many tickets would you like to buy (1–4)? ")
+        request_str = input("Pray tell, how many tickets wouldst thou claim, O moviegoer supreme? ")
 
         # Validate that the input is numeric before converting.
         if not request_str.strip().isdigit():
