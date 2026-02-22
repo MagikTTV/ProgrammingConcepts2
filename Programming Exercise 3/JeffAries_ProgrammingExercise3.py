@@ -163,7 +163,7 @@ def main() -> None:
     """Run the monthly expenses program.
 
     Parameters:
-        None
+        None.
 
     Variables:
         expenses (list[tuple[str, float]]): The user's entered expenses.
